@@ -21,4 +21,27 @@ export const defaultTheme = {
     background: "#FAFAFA",
     white: "#FFFFFF",
   },
+
+  weight: {
+    regular: 400,
+    bold: 700,
+    extraBold: 800,
+  },
+
+  size: {
+    title: {
+      xl: "3rem",
+      l: "2rem",
+      m: "1.5rem",
+      s: "1.25rem",
+      xs: "1.125rem",
+    },
+    text: {
+      l: "1.25rem",
+      m: "1rem",
+      s: "0.875rem",
+      xs: "0.75rem",
+    },
+    tag: "0.625rem",
+  },
 } as const;
