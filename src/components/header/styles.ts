@@ -6,6 +6,8 @@ export const Header = styled.header`
 
   display: flex;
   justify-content: space-between;
+
+  margin-bottom: 2.5rem;
 `;
 
 export const ActionsContainer = styled.div`
