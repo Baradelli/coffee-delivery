@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { defaultTheme } from "../../styles/themes/default";
 
 import {
@@ -10,6 +11,8 @@ import {
 import { MapPin, ShoppingCart } from "phosphor-react";
 
 export const Header = () => {
+  const [counter] = useState(0);
+
   return (
     <HeaderComponent>
       <img
@@ -33,7 +36,7 @@ export const Header = () => {
             color={defaultTheme.product["yellow-900"]}
           />
 
-          <Counter>2</Counter>
+          {counter > 0 && <Counter>{counter}</Counter>}
         </Cart>
       </ActionsContainer>
     </HeaderComponent>
