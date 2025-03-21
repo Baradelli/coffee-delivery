@@ -16,7 +16,7 @@ export const Header = () => {
   return (
     <HeaderComponent>
       <img
-        src="/images/logo.png"
+        src="/images/logo.svg"
         alt={
           'Logo com um ícone roxo de copo de café com um foguete dentro e o texto "Coffee Delivery" ao lado, em preto.'
         }
