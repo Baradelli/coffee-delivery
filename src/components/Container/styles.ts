@@ -5,4 +5,9 @@ export const ContainerComponent = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  margin-inline: auto;
+  padding: 2rem;
+
+  max-width: 1120px;
 `;
