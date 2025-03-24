@@ -35,6 +35,10 @@ export const SecondaryButton = styled.button`
 `;
 
 export const IconButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 0.5rem;
   border-radius: 0.625rem;
   cursor: pointer;
