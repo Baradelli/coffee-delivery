@@ -43,6 +43,8 @@ export const Cart = styled.div`
   border-radius: 0.5rem;
 
   padding-inline: 0.5rem;
+
+  cursor: pointer;
 `;
 
 export const Counter = styled.span`

@@ -9,17 +9,22 @@ import {
   Counter,
 } from "./styles";
 import { MapPin, ShoppingCart } from "phosphor-react";
+import { useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const [counter] = useState(0);
 
+  const navigate = useNavigate();
+
   return (
     <HeaderComponent>
       <img
+        style={{ cursor: "pointer" }}
         src="/images/logo.svg"
         alt={
           'Logo com um ícone roxo de copo de café com um foguete dentro e o texto "Coffee Delivery" ao lado, em preto.'
         }
+        onClick={() => navigate("/")}
       />
 
       <ActionsContainer>
@@ -29,7 +34,7 @@ export const Header = () => {
           <span>Porto Alegre, RS</span>
         </Location>
 
-        <Cart>
+        <Cart onClick={() => navigate("/checkout")}>
           <ShoppingCart
             size={22}
             weight="fill"

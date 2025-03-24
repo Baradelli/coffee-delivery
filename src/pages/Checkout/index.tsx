@@ -12,8 +12,11 @@ import { Select } from "../../components/Select";
 import coffeeData from "../../../data.json";
 import { CoffeeCard } from "./components/CoffeeCard";
 import { Button } from "../../components/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function Checkout() {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <section>
@@ -129,7 +132,9 @@ export default function Checkout() {
             </div>
           </div>
 
-          <Button variant="primary">Confirmar Pedido</Button>
+          <Button onClick={() => navigate("/success")} variant="primary">
+            Confirmar Pedido
+          </Button>
         </div>
       </section>
     </Container>

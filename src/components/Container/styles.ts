@@ -7,6 +7,7 @@ export const ContainerComponent = styled.div`
   justify-content: center;
 
   margin-inline: auto;
+  margin-bottom: 2rem;
 
   max-width: 1120px;
 `;
