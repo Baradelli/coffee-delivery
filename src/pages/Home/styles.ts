@@ -84,7 +84,7 @@ export const Container = styled.div`
         gap: 1rem;
 
         padding: 1.25rem;
-        border-radius: 6px 35px 35px 6px;
+        border-radius: 6px 35px 6px 35px;
 
         background-color: ${({ theme }) => theme.base.card};
 
@@ -136,20 +136,23 @@ export const Container = styled.div`
         }
 
         .buy {
+          margin-top: auto;
+
           display: flex;
           align-items: center;
           justify-content: space-between;
-
           gap: 1rem;
+
+          white-space: nowrap;
 
           .price {
             font-size: ${({ theme }) => theme.size.text.l};
             font-weight: ${({ theme }) => theme.weight.bold};
-            color: ${({ theme }) => theme.base.title};
+            color: ${({ theme }) => theme.base.text};
             font-family: "Baloo 2", sans-serif;
 
             &::before {
-              content: "R$";
+              content: "R$ ";
               font-size: ${({ theme }) => theme.size.text.xs};
               font-weight: ${({ theme }) => theme.weight.regular};
               color: ${({ theme }) => theme.base.label};
