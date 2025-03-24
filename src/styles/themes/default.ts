@@ -43,5 +43,9 @@ export const defaultTheme = {
       xs: "0.75rem",
     },
     tag: "0.625rem",
+    button: {
+      g: "0.875rem",
+      m: "0.75rem",
+    },
   },
 } as const;

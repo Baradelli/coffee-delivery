@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const PrimaryButton = styled.button`
   padding: 0.5rem 1rem;
   border-radius: 0.625rem;
-  font-size: 0.875rem;
-  font-weight: 700;
+  font-size: ${({ theme }) => theme.size.button.g};
+  font-weight: ${({ theme }) => theme.weight.bold};
   line-height: 160%;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -20,8 +20,8 @@ export const PrimaryButton = styled.button`
 export const SecondaryButton = styled.button`
   padding: 0.5rem 1rem;
   border-radius: 0.625rem;
-  font-size: 0.75rem;
-  font-weight: 400;
+  font-size: ${({ theme }) => theme.size.button.m};
+  font-weight: ${({ theme }) => theme.weight.regular};
   line-height: 160%;
   cursor: pointer;
   transition: background-color 0.3s;
