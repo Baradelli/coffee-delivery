@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   width: 100%;
-  padding: 2rem 10rem;
+  padding: 2rem;
 
   display: flex;
   justify-content: space-between;
 
   margin-bottom: 2.5rem;
+  max-width: 1120px;
+
+  margin-inline: auto;
 `;
 
 export const ActionsContainer = styled.div`
