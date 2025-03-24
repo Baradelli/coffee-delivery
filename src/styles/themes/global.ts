@@ -15,7 +15,8 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     background: ${(props) => props.theme.base.background};
-    /* color: ${(props) => props.theme["gray-300"]}; */
+    color: ${(props) =>
+      props.theme.base.text}; // atualizado para usar a cor existente
     -webkit-font-smoothing: antialiased;
   }
 
@@ -29,5 +30,22 @@ export const GlobalStyle = createGlobalStyle`
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Baloo 2', sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: ${(props) => props.theme.base.card};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: ${(props) => props.theme.base.hover}; 
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: ${(props) => props.theme.base.label}; 
   }
 `;
