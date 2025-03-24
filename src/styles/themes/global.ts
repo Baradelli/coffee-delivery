@@ -8,9 +8,9 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 130%;
   }
 
-  :focus {
-    outline: 0;
-    /* box-shadow: 0 0 0 2px ${(props) => props.theme["green-500"]}; */
+  button {
+    outline: none;
+    border: none;
   }
 
   body {
@@ -23,5 +23,9 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Baloo 2', sans-serif;
   }
 `;
