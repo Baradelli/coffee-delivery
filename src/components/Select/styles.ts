@@ -19,6 +19,7 @@ export const Select = styled.button<SelectProps>`
   font-weight: ${({ theme }) => theme.weight.regular};
   color: ${({ theme }) => theme.base.text};
 
+  background-color: ${({ theme }) => theme.base.button};
   transition: background-color 0.2s;
 
   &:hover {
