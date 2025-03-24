@@ -3,8 +3,8 @@ import { defaultTheme } from "../../../styles/themes/default";
 
 export const Intro = () => {
   return (
-    <>
-      <div style={{ maxWidth: 588 }}>
+    <div className="intro-container">
+      <div>
         <div className="title-container">
           <h1 className="title">
             Encontre o café perfeito para qualquer hora do dia
@@ -59,6 +59,6 @@ export const Intro = () => {
       </div>
 
       <img src="/images/coffee-delivery.svg" alt="Café" />
-    </>
+    </div>
   );
 };

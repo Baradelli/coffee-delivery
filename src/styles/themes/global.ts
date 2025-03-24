@@ -23,6 +23,8 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1rem;
+
+    outline: none;
   }
 
   h1, h2, h3, h4, h5, h6 {
