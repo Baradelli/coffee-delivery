@@ -123,9 +123,5 @@ export const Container = styled.div`
         }
       }
     }
-
-    .custom-border-radius {
-      border-radius: 6px 35px 6px 35px;
-    }
   }
 `;

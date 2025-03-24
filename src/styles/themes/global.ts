@@ -48,4 +48,8 @@ export const GlobalStyle = createGlobalStyle`
   ::-webkit-scrollbar-thumb:hover {
     background: ${(props) => props.theme.base.label}; 
   }
+
+  .custom-border-radius {
+    border-radius: 6px 35px 6px 35px;
+  }
 `;
