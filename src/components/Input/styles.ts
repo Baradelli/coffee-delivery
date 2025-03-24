@@ -7,6 +7,9 @@ export const Input = styled.input`
   color: ${({ theme }) => theme.base.text};
   font-weight: 400;
 
+  background-color: ${({ theme }) => theme.base.input};
+  border: 1px solid ${({ theme }) => theme.base.button};
+
   &::placeholder {
     color: ${({ theme }) => theme.base.label};
   }
