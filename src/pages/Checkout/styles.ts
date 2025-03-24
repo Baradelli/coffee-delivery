@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   width: 100%;
   gap: 2rem;
 
@@ -10,6 +10,11 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    .divider {
+      border: 1px solid ${({ theme }) => theme.base.button};
+      width: 100%;
+    }
 
     h2 {
       font-size: ${({ theme }) => theme.size.title.xs};
@@ -93,6 +98,34 @@ export const Container = styled.div`
         grid-template-columns: 1fr 1fr 1fr;
         gap: 0.75rem;
       }
+
+      .summary-totals {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        .item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        p {
+          font-size: ${({ theme }) => theme.size.text.s};
+          font-weight: ${({ theme }) => theme.weight.regular};
+          color: ${({ theme }) => theme.base.text};
+        }
+
+        strong {
+          font-size: ${({ theme }) => theme.size.text.l};
+          font-weight: ${({ theme }) => theme.weight.bold};
+          color: ${({ theme }) => theme.base.subtitle};
+        }
+      }
+    }
+
+    .custom-border-radius {
+      border-radius: 6px 35px 6px 35px;
     }
   }
 `;

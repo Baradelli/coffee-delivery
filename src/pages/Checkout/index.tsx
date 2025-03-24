@@ -9,6 +9,9 @@ import { Container } from "./styles";
 import { defaultTheme } from "../../styles/themes/default";
 import { Input } from "../../components/Input";
 import { Select } from "../../components/Select";
+import coffeeData from "../../../data.json";
+import { CoffeeCard } from "./components/CoffeeCard";
+import { Button } from "../../components/Button";
 
 export default function Checkout() {
   return (
@@ -94,8 +97,40 @@ export default function Checkout() {
           </div>
         </div>
       </section>
+
       <section>
         <h2>Cafés selecionados</h2>
+
+        <div className="card custom-border-radius">
+          {coffeeData.coffees
+            .filter(({ id }) => id < 3)
+            .map((coffee) => (
+              <>
+                <CoffeeCard key={coffee.id} {...coffee} />
+
+                <div className="divider" />
+              </>
+            ))}
+
+          <div className="summary-totals">
+            <div className="item">
+              <p>Total de itens</p>
+              <p>R$ 29,70</p>
+            </div>
+
+            <div className="item">
+              <p>Entrega</p>
+              <p>R$ 3,50</p>
+            </div>
+
+            <div className="item">
+              <strong>Total</strong>
+              <strong>R$ 33,20</strong>
+            </div>
+          </div>
+
+          <Button variant="primary">Confirmar Pedido</Button>
+        </div>
       </section>
     </Container>
   );
