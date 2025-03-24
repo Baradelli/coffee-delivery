@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const PrimaryButton = styled.button`
-  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+
+  padding: 0.75rem 1rem;
   border-radius: 0.625rem;
   font-size: ${({ theme }) => theme.size.button.g};
   font-weight: ${({ theme }) => theme.weight.bold};
@@ -18,6 +20,13 @@ export const PrimaryButton = styled.button`
 `;
 
 export const SecondaryButton = styled.button`
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.25rem;
+
   padding: 0.5rem 1rem;
   border-radius: 0.625rem;
   font-size: ${({ theme }) => theme.size.button.m};
