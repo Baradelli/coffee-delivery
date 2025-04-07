@@ -1,8 +1,24 @@
 import { CurrencyDollar, MapPin, Timer } from "phosphor-react";
 import { Container } from "./styles";
 import { defaultTheme } from "../../styles/themes/default";
+import { useCart } from "../../hooks/useCart";
+import { useParams } from "react-router-dom";
 
 export default function Success() {
+  const { orders } = useCart();
+  const { orderId } = useParams();
+  const orderInfo = orders.find((order) => order.id === Number(orderId));
+
+  const paymentMethod = {
+    credit: "Cartão de crédito",
+    debit: "Cartão de débito",
+    cash: "Dinheiro",
+  };
+
+  if (!orderInfo?.id) {
+    return null;
+  }
+
   return (
     <Container>
       <section>
@@ -20,9 +36,14 @@ export default function Success() {
 
             <div>
               <p>
-                Entrega em <strong>Rua João Daniel Martinelli, 102</strong>
+                Entrega em{" "}
+                <strong>
+                  {orderInfo.street}, {orderInfo.number}
+                </strong>
               </p>
-              <p>Farrapos - Porto Alegre, RS</p>
+              <p>
+                {orderInfo.neighborhood} - {orderInfo.city}, {orderInfo.state}
+              </p>
             </div>
           </div>
           <div className="item">
@@ -52,7 +73,7 @@ export default function Success() {
             <div>
               <p>Pagamento na entrega</p>
               <p>
-                <strong>Cartão de Crédito</strong>
+                <strong>{paymentMethod[orderInfo.paymentMethod]}</strong>
               </p>
             </div>
           </div>

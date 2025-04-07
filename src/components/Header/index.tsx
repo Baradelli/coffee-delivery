@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { defaultTheme } from "../../styles/themes/default";
 
 import {
@@ -10,11 +9,17 @@ import {
 } from "./styles";
 import { MapPin, ShoppingCart } from "phosphor-react";
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../../hooks/useCart";
+import { useEffect } from "react";
 
 export const Header = () => {
-  const [counter] = useState(0);
+  const { cart } = useCart();
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log("cart", cart);
+  }, []);
 
   return (
     <HeaderComponent>
@@ -41,7 +46,7 @@ export const Header = () => {
             color={defaultTheme.product["yellow-900"]}
           />
 
-          {counter > 0 && <Counter>{counter}</Counter>}
+          {cart?.length > 0 && <Counter>{cart.length}</Counter>}
         </Cart>
       </ActionsContainer>
     </HeaderComponent>

@@ -6,9 +6,19 @@ import { Card } from "./styles";
 import { defaultTheme } from "../../../../styles/themes/default";
 import { maskMoney } from "../../../../utils/mask-money";
 
-type CoffeeCardProps = ICoffee;
+type CoffeeCardProps = {
+  coffee: ICoffee & { quantity: number };
+  handleItemIncrement: (itemId: string) => void;
+  handleItemDecrement: (itemId: string) => void;
+  handleItemRemove: (itemId: string) => void;
+};
 
-export const CoffeeCard = (coffee: CoffeeCardProps) => {
+export const CoffeeCard = ({
+  coffee,
+  handleItemDecrement,
+  handleItemIncrement,
+  handleItemRemove,
+}: CoffeeCardProps) => {
   return (
     <Card>
       <div className="info">
@@ -18,9 +28,16 @@ export const CoffeeCard = (coffee: CoffeeCardProps) => {
           <h3 className="title">{coffee.title}</h3>
 
           <div className="actions">
-            <InputNumber />
+            <InputNumber
+              handleItemDecrement={() => handleItemDecrement(coffee.id)}
+              handleItemIncrement={() => handleItemIncrement(coffee.id)}
+              quantity={coffee.quantity}
+            />
 
-            <Button variant="secondary">
+            <Button
+              variant="secondary"
+              onClick={() => handleItemRemove(coffee.id)}
+            >
               <Trash size={16} color={defaultTheme.product["purple-500"]} />
               REMOVER
             </Button>
